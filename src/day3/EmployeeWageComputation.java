@@ -5,6 +5,11 @@ public class EmployeeWageComputation {
 	static void message() {
 		System.out.println("Welcome to Employee Wage Computation Program");
 	}
+	
+	static double fullTimeHour = 8;
+	static double partTimeHour = 4;
+	static double wagePerHour = 20;
+	static double workingDaysInMonth = 20;
 
 	static void attendence() {
 		int IS_PRESENT = 1;
@@ -17,9 +22,6 @@ public class EmployeeWageComputation {
 	}
 
 	static void fullTimeEmployeeWage() {
-		double fullTimeHour = 8;
-		double wagePerHour = 20;
-		double workingDaysInMonth = 20;
 		double fullTimeEmployeeWagePerDay;
 		fullTimeEmployeeWagePerDay = wagePerHour * fullTimeHour;
 		double fullTimeEmployeeWagePerMonth;
@@ -30,9 +32,6 @@ public class EmployeeWageComputation {
 	}
 
 	static void partTimeEmployeeWage() {
-		double partTimeHour = 4;
-		double wagePerHour = 20;
-		double workingDaysInMonth = 20;
 		double partTimeEmployeeWagePerDay;
 		partTimeEmployeeWagePerDay = wagePerHour * partTimeHour;
 		double partTimeEmployeeWagePerMonth;
