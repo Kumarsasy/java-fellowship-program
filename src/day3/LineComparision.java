@@ -14,22 +14,22 @@ public class LineComparision {
 		System.out.println("Length of the Line is " + length);
 		return length;
 	}
-		
-	static void equalityOf2Lines(Double length1 , Double length2) {
-		
-		if(length1.equals(length2)) {
+
+	static void equalityOf2Lines(Double length1, Double length2) {
+
+		if (length1.equals(length2)) {
 			System.out.println("The length of two lines are equal");
-		}else {
+		} else {
 			System.out.println("The length of two lines are not equal");
 		}
 	}
-	
-	static void compareTwoLines(Double length1 , Double length2) {
-		
-			System.out.println(length1.compareTo(length2));
+
+	static void compareTwoLines(Double length1, Double length2) {
+
+		System.out.println(length1.compareTo(length2));
 
 	}
-	
+
 	public static void main(String[] args) {
 		message();
 		Scanner input = new Scanner(System.in);
@@ -38,23 +38,21 @@ public class LineComparision {
 		int y1 = input.nextInt();
 		int x2 = input.nextInt();
 		int y2 = input.nextInt();
-		
+
 		System.out.println("Enter the coordinates of (x3,y3) and (x4,y4) ");
 		int x3 = input.nextInt();
 		int y3 = input.nextInt();
 		int x4 = input.nextInt();
 		int y4 = input.nextInt();
 		input.close();
-		
-		Double l1=lengthOfLine(x1,y1,x2,y2);
-		Double l2=lengthOfLine(x3,y3,x4,y4);
+
+		Double l1 = lengthOfLine(x1, y1, x2, y2);
+		Double l2 = lengthOfLine(x3, y3, x4, y4);
 		System.out.println(l1);
 		System.out.println(l2);
-		
-		equalityOf2Lines(l1,l2);
-		compareTwoLines(l1,l2);
 
+		equalityOf2Lines(l1, l2);
+		compareTwoLines(l1, l2);
 
 	}
-
 }

@@ -5,7 +5,7 @@ public class EmployeeWageComputation {
 	static void message() {
 		System.out.println("Welcome to Employee Wage Computation Program");
 	}
-	
+
 	static double fullTimeHour = 8;
 	static double partTimeHour = 4;
 	static double wagePerHour = 20;
@@ -68,5 +68,4 @@ public class EmployeeWageComputation {
 		message();
 		employeeWage();
 	}
-
 }
