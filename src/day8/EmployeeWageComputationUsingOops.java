@@ -1,20 +1,20 @@
-package day4;
+package day8;
 
-public class EmployeeWageUsingOop {
+public class EmployeeWageComputationUsingOops {
 
 	static void message() {
 		System.out.println("Welcome to Employee Wage Computation Program");
 	}
 
-	static double fullTimeHour = 8;
-	static double partTimeHour = 4;
-	static double wagePerHour = 20;
-	static double workingDaysInMonth = 20;
-	static double maxWorkingHoursInMonth = 100;
+	static int fullTimeHour = 8;
+	static int partTimeHour = 4;
+	static int wagePerHour = 20;
+	static int workingDaysInMonth = 20;
+	static int maxWorkingHoursInMonth = 100;
 
 	static void attendence() {
 		int IS_PRESENT = 1;
-		double attendenceCheck = Math.floor(Math.random() * 10) % 2;
+		int attendenceCheck = (int)Math.floor(Math.random() * 10) % 2;
 		if (attendenceCheck == IS_PRESENT) {
 			System.out.println("Employee is Present");
 		} else {
@@ -23,9 +23,9 @@ public class EmployeeWageUsingOop {
 	}
 
 	static void fullTimeEmployeeWage() {
-		double fullTimeEmployeeWagePerDay;
+		int fullTimeEmployeeWagePerDay;
 		fullTimeEmployeeWagePerDay = wagePerHour * fullTimeHour;
-		double fullTimeEmployeeWagePerMonth;
+		int fullTimeEmployeeWagePerMonth;
 		fullTimeEmployeeWagePerMonth = fullTimeEmployeeWagePerDay * workingDaysInMonth;
 		System.out.println("Fulltime Working Employee");
 		System.out.println("Daily Wage for Full Time Employee is " + fullTimeEmployeeWagePerDay);
@@ -33,9 +33,9 @@ public class EmployeeWageUsingOop {
 	}
 
 	static void partTimeEmployeeWage() {
-		double partTimeEmployeeWagePerDay;
+		int partTimeEmployeeWagePerDay;
 		partTimeEmployeeWagePerDay = wagePerHour * partTimeHour;
-		double partTimeEmployeeWagePerMonth;
+		int partTimeEmployeeWagePerMonth;
 		partTimeEmployeeWagePerMonth = partTimeEmployeeWagePerDay * workingDaysInMonth;
 		System.out.println("Parttime Working Employee");
 		System.out.println("Daily Wage for a Part Time Employee is " + partTimeEmployeeWagePerDay);
@@ -43,9 +43,9 @@ public class EmployeeWageUsingOop {
 	}
 
 	static void employeeWageUsingSwitch() {
-		double employeeCheck;
-		employeeCheck = Math.floor(Math.random() * 10) % 2;
-		switch ((int) employeeCheck) {
+		int employeeCheck;
+		employeeCheck = (int) Math.floor(Math.random() * 10) % 2;
+		switch (employeeCheck) {
 		case 0:
 			fullTimeEmployeeWage();
 			break;
@@ -57,14 +57,14 @@ public class EmployeeWageUsingOop {
 
 	static void employeeWage() {
 		int IS_PRESENT = 1;
-		double attendenceCheck = Math.floor(Math.random() * 10) % 2;
+		int attendenceCheck = (int)Math.floor(Math.random() * 10) % 2;
 		if (attendenceCheck == IS_PRESENT) {
 			employeeWageUsingSwitch();
 		} else {
 			System.out.println("Employee is Absent");
 		}
 	}
-	
+
 	static void wagesTillCondition() {
 		int empHours = 0, totalEmpHours = 0, totalWorkingDays = 0;
 
@@ -84,10 +84,9 @@ public class EmployeeWageUsingOop {
 			totalEmpHours += empHours;
 			System.out.println("Day: " + totalWorkingDays + " Employee Hours: "+ empHours);
 		}
-		double totalEmpWage = totalEmpHours * wagePerHour;
+		int totalEmpWage = totalEmpHours * wagePerHour;
 		System.out.println("Total employee wage: " + totalEmpWage);
 	}
-
 
 	public static void main(String[] args) {
 		message();

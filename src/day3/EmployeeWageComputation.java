@@ -10,6 +10,7 @@ public class EmployeeWageComputation {
 	static double partTimeHour = 4;
 	static double wagePerHour = 20;
 	static double workingDaysInMonth = 20;
+	static double maxWorkingHoursInMonth = 100;
 
 	static void attendence() {
 		int IS_PRESENT = 1;
@@ -63,9 +64,33 @@ public class EmployeeWageComputation {
 			System.out.println("Employee is Absent");
 		}
 	}
+	
+	static void wagesTillCondition() {
+		int empHours = 0, totalEmpHours = 0, totalWorkingDays = 0;
+
+		while (totalEmpHours <= maxWorkingHoursInMonth && totalWorkingDays < workingDaysInMonth) {
+			totalWorkingDays++;
+			int empCheck = (int)Math.floor(Math.random() * 10) % 3;
+			switch(empCheck) {
+				case 1:
+					empHours = 4;
+					break;
+				case 2:
+					empHours = 8;
+					break;
+				default:
+					empHours = 0;
+			}
+			totalEmpHours += empHours;
+			System.out.println("Day: " + totalWorkingDays + " Employee Hours: "+ empHours);
+		}
+		double totalEmpWage = totalEmpHours * wagePerHour;
+		System.out.println("Total employee wage: " + totalEmpWage);
+	}
 
 	public static void main(String[] args) {
 		message();
 		employeeWage();
+		wagesTillCondition();
 	}
 }
